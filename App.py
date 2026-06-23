@@ -9,7 +9,7 @@ from InfrastructureApi.usgs_adapter import USGSAdapter
 from InfrastructureDataBase.sqlite_adapter import SQLiteAdapter
 from Application.obtener_sismos import ObtenerSismos
 
-# Configuración de página
+
 st.set_page_config(
     page_title="Sistema de Monitoreo de Sismos",
     page_icon="🌋",
@@ -17,7 +17,6 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Estilos CSS personalizados para Diseño Premium
 st.markdown("""
 <style>
     /* Estilo de fuentes de Google */
@@ -149,8 +148,8 @@ DB_PATH = os.path.join(os.path.dirname(__file__), "sismos_nicaragua.db")
 def cargar_datos_api():
     """Obtiene datos de la API USGS filtrados para el área de Nicaragua en tiempo real."""
     try:
-        # Hacemos una consulta directa a la API de USGS usando la caja delimitadora de Nicaragua
-        # para que siempre muestre sismos en esta región en tiempo real
+        
+        
         url = (
             "https://earthquake.usgs.gov/fdsnws/event/1/query"
             "?format=geojson"
@@ -788,4 +787,4 @@ st.markdown("""
     <p>Sistema de Monitoreo de Sismos &copy; 2026. Todos los derechos reservados.</p>
     <p style="font-size: 0.75rem; color: #475569; margin-top: 0.2rem;">Arquitectura Limpia &bull; Diseñado para Visualizaciones Científicas</p>
 </div>
-""", unsafe_allow_html=True)
+""", unsafe_allow_html=True)
